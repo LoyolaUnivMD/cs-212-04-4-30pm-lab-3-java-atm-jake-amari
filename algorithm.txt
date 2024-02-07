@@ -1,19 +1,24 @@
 1. Import Scanner utility
 2. Create main class
-    a. Initialize double userBalance as 212.90
-    b. Prompt user for name, save as string userName
-    c. Welcome user using their name and ask what they would like to do, save as string choice
-    d. while choice isn't "quit"
-        i. if choice is "withdraw"
-            1a. Ask user how much to withdraw, save as double withdrawAmount
-            2a. If withdrawAmount is greater that userBalance
+    a. Create Scanner object
+    b. Prompt user for name, save as string name
+    c. Initialize double userBalance as 212.90
+    d. Initialize int leave as 0
+    e. while leave = 0
+        i. Welcome user using their name and ask what they would like to do, save as string choice
+        ii. if choice is "withdraw"
+            1a. Ask user how much to withdraw, save as double withdraw
+            2a. If withdraw is greater that userBalance
                 1b. Tell user they cant take out that much
             3a. Otherwise
-                1b. Subtract withdrawAmount from userBalance, replace userBalance value with result
-        ii. Otherwise if choice is deposit
-            1a. Ask user how much to deposit, save as double depositAmount
-            2a. Add depositAmount to userBalance, replace userBalance value with result
-        iii. Otherwise if choice is "check balance"
+                1b. Subtract withdraw from userBalance, replace userBalance value with result
+        iii. Otherwise if choice is deposit
+            1a. Ask user how much to deposit, save as double deposit
+            2a. Add deposit to userBalance, replace userBalance value with result
+        iv. Otherwise if choice is "check balance"
             1a. Output current userBalance
-        iv. Ask user if they would like to do anything else, replace choice value with user's input
-    e. Thank user for using the program
+        v. Otherwise if choice is "leave"
+            1a. int leave becomes 1
+        vi. Otherwise
+            1a. Tell user their input is invalid and to try again, replace choice with user input
+    f. Thank user for using the program
