@@ -3,22 +3,34 @@
     a. Create Scanner object
     b. Prompt user for name, save as string name
     c. Initialize double userBalance as 212.90
+    d. Initialize double net as 0
     d. Initialize int leave as 0
     e. while leave = 0
-        i. Welcome user using their name and ask what they would like to do, save as string choice
-        ii. if choice is "withdraw"
-            1a. Ask user how much to withdraw, save as double withdraw
-            2a. If withdraw is greater that userBalance
-                1b. Tell user they cant take out that much
-            3a. Otherwise
-                1b. Subtract withdraw from userBalance, replace userBalance value with result
-        iii. Otherwise if choice is deposit
+        I. Welcome user using their name and ask what they would like to do, save as int choice
+        II. If choice is 1 (deposit)
             1a. Ask user how much to deposit, save as double deposit
             2a. Add deposit to userBalance, replace userBalance value with result
-        iv. Otherwise if choice is "check balance"
+            3a. Add deposit to net, replace net value with result
+        III. Otherwise if choice is 2 (withdraw
+                    1a. Ask user how much to withdraw, save as double withdraw
+                    2a. If withdraw is greater that userBalance
+                        1b. Tell user they cant take out that much
+                    3a. Otherwise
+                        1b. Subtract withdraw from userBalance, replace userBalance value with result
+                        2b. Subtract withdraw from net, replace net value with result
+        IV. Otherwise if choice is "check balance"
             1a. Output current userBalance
-        v. Otherwise if choice is "leave"
+        V. Otherwise if choice is "leave"
             1a. int leave becomes 1
-        vi. Otherwise
+        VI. Otherwise
             1a. Tell user their input is invalid and to try again, replace choice with user input
-    f. Thank user for using the program
+    f. Ask the user if they want their receipt printed of emailed, save user input as string receiptChoice
+    g. If receiptChoice is "printed"
+        I. Output the userBalance
+        II. If net is less than 0
+            1a. Tell user their account balance went down by the net value
+        III.Otherwise
+            1a. Tell user their account balance went up by the net value
+    h. Otherwise
+        I. Tell user to check their email
+    i. Thank user for using the program
