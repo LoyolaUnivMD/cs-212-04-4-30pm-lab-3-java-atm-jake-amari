@@ -1,36 +1,37 @@
 1. Import Scanner utility
+2. Import DecimalFormat text
 2. Create main method
-    a. Create Scanner object
+    a. Create necessary objects
     b. Prompt user for name, save as string name
     c. Initialize double accountBalance as 212.90
     d. Initialize double net as 0
-    d. Initialize int leave as 0
-    e. while leave = 0
+    e. Initialize int leave as 0
+    f. while leave = 0
         I. Welcome user using their name and ask what they would like to do, save as string choice
-        II. If choice is 1 (deposit)
+        II. If choice is "deposit"
             1a. Ask user how much to deposit, save as double deposit
             2a. Add deposit to accountBalance, replace accountBalance value with result
             3a. Add deposit to net, replace net value with result
-        III. Otherwise if choice is 2 (withdraw)
-                    1a. Ask user how much to withdraw, save as double withdraw
-                    2a. If withdraw is greater that accountBalance
-                        1b. Tell user they cant take out that much
-                    3a. Otherwise
-                        1b. Subtract withdraw from accountBalance, replace accountBalance value with result
-                        2b. Subtract withdraw from net, replace net value with result
-        IV. Otherwise if choice is 3 (check balance)
+        III. Otherwise if choice is "withdraw"
+            1a. Ask user how much to withdraw, save as double withdraw
+            2a. If withdraw is greater that accountBalance
+                1b. Tell user they cant take out that much
+            3a. Otherwise
+                1b. Subtract withdraw from accountBalance, replace accountBalance value with result
+                2b. Subtract withdraw from net, replace net value with result
+        IV. Otherwise if choice is "check balance"
             1a. Output current accountBalance
-        V. Otherwise if choice is 4 (leave)
+        V. Otherwise if choice is "leave"
             1a. int leave becomes 1
         VI. Otherwise
             1a. Tell user their input is invalid and to try again, replace choice with user input
-    f. Ask the user if they want their receipt printed of emailed, save user input as string receiptChoice
-    g. If receiptChoice is "printed"
+    g. Ask the user if they want their receipt printed of emailed, save user input as string receiptChoice
+    h. If receiptChoice is "printed"
         I. Output the accountBalance
         II. If net is less than 0
             1a. Tell user their account balance went down by the net value
         III.Otherwise
             1a. Tell user their account balance went up by the net value
-    h. Otherwise
+    i. Otherwise
         I. Tell user to check their email
-    i. Thank user for using the program
+    j. Thank user for using the program
